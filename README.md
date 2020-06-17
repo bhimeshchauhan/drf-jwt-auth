@@ -21,3 +21,7 @@ http://localhost:8000
 
 ### api
 http://localhost:8000/api/{{your-app}}
+
+## Demo
+
+[![Watch the video](./demo.mp4)]
