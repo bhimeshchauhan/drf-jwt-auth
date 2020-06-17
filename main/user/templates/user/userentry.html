@@ -1,0 +1,59 @@
+{% extends "main/base.html" %}
+{% block content %}
+
+<h1 class="tip">Maintain log of your cars</h1>
+<div class="cont">
+  <div class="form sign-in grid">
+    <h2>Welcome back !</h2>
+    <form method="POST" action="">
+      {% csrf_token %}
+
+      {{signinform.username.label}}
+      {{signinform.username}}
+
+      {{signinform.password1.label}}
+      {{signinform.password1}}
+
+      <p class="forgot-pass">Forgot password?</p>
+      <button type="submit" name="login" class="submit">Sign In</button>
+    </form>
+  </div>
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <h2>New here?</h2>
+        <p>Sign up and discover great amount of new opportunities!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>One of us?</h2>
+        <p>If you already has an account, just sign in. We've missed you!</p>
+      </div>
+      <div class="img__btn">
+        <span class="m--up">Sign Up</span>
+        <span class="m--in">Sign In</span>
+      </div>
+    </div>
+    <div class="form sign-up grid">
+      <h2>Time to feel like home</h2>
+      <form method="POST" action="create_user/" id="signup">
+        {% csrf_token %}
+
+        {{signupform.username.label}}
+        {{signupform.username}}
+
+        {{signupform.email.label}}
+        {{signupform.email}}
+
+        {{signupform.password1.label}}
+        {{signupform.password1}}
+
+        {{signupform.password2.label}}
+        {{signupform.password2}}
+        <button type="submit" name="signup" class="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="error-msg"></div>
+
+{% endblock content %}
