@@ -24,4 +24,4 @@ http://localhost:8000/api/{{your-app}}
 
 ## Demo
 
-[![Watch the video](./demo.gif)]
+![Watch the video](./demo.gif)
